@@ -30,10 +30,10 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
+					DEFAULT: '#008000', // Main green from the logo
 					foreground: 'hsl(var(--primary-foreground))',
-					'dark': '#0F2948',
-					'light': '#2C5282',
+					'dark': '#006600', // Darker shade for gradient
+					'light': '#26a626', // Lighter shade for hover effects
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',

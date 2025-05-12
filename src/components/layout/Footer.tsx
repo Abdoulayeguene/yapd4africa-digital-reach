@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
@@ -10,9 +9,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="inline-block mb-4">
-              <h3 className="text-2xl font-bold">
-                YAPD<span className="text-secondary">4</span>Africa
-              </h3>
+              <div className="flex flex-col items-center md:items-start">
+                <img 
+                  src="/lovable-uploads/bf443369-4533-4376-972e-328e4771e4c1.png" 
+                  alt="YAPD4Africa Logo" 
+                  className="h-14 mb-3" 
+                />
+                <h3 className="text-2xl font-bold">
+                  YAPD<span className="text-secondary">4</span>Africa
+                </h3>
+              </div>
             </Link>
             <p className="text-gray-300 mb-6">
               Advancing social development and empowering African grassroots communities through youth-led empowerment, inclusive governance and advocacy.

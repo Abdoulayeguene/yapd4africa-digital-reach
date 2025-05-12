@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221 83% 23%;
+    --primary: 120 100% 25%; /* Green color matching #008000 */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 24 95% 53%;
@@ -33,7 +33,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221 83% 23%;
+    --ring: 120 100% 25%; /* Match primary color */
 
     --radius: 0.5rem;
   }
@@ -93,7 +93,7 @@
   }
   
   .btn-primary {
-    @apply bg-primary text-white hover:bg-primary/90 px-6 py-3 rounded-md font-medium transition-colors;
+    @apply bg-primary text-white hover:bg-primary-light px-6 py-3 rounded-md font-medium transition-colors;
   }
   
   .btn-secondary {

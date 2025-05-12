@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
@@ -36,9 +36,11 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-primary">
-              YAPD<span className="text-secondary">4</span>Africa
-            </span>
+            <img 
+              src="/lovable-uploads/bf443369-4533-4376-972e-328e4771e4c1.png" 
+              alt="YAPD4Africa Logo" 
+              className="h-12 md:h-14" 
+            />
           </Link>
 
           {/* Desktop Navigation */}
