@@ -34,7 +34,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/bf443369-4533-4376-972e-328e4771e4c1.png" 
+              src="/lovable-uploads/logoyapd.png" 
               alt="YAPD4Africa Logo" 
               className="h-12 md:h-14" 
             />

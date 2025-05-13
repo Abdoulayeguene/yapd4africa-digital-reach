@@ -1,12 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Target, BookOpen, Users, GraduationCap, Leaf, Briefcase, Globe, Award } from "lucide-react";
 import Hero from "../components/home/Hero";
 import About from "../components/home/About";
 import Mission from "../components/home/Mission";
 import Partners from "../components/home/Partners";
 import ApproachSection from "../components/home/ApproachSection";
-import ImpactSection from "../components/home/ImpactSection";
 import SectionHeading from "../components/ui/SectionHeading";
 
 const Index = () => {
@@ -16,123 +15,119 @@ const Index = () => {
       <About />
       <Mission />
 
-      {/* Our Objectives Section */}
-      <section className="section-padding bg-gray-50">
+      {/* Our Impact Section */}
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-white rounded-3xl">
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-0 w-full h-full bg-[url('/pattern.svg')] bg-repeat opacity-10"></div>
+            <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-green-500/20 to-green-500/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-green-500/20 to-green-500/20 rounded-full blur-3xl"></div>
+          </div>
+        </div>
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="container-custom"
+          className="container mx-auto px-4 relative z-10"
         >
-          <SectionHeading 
-            title="Our Objectives" 
-            subtitle="Building a better future through strategic goals"
-            centered
-          />
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+            >
+              Our <span className="text-green-400">Impact</span>
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg text-black-600"
+            >
+              Making a difference across Africa and beyond
+            </motion.p>
+          </div>
 
-          <div className="mx-auto max-w-4xl mt-12">
-            <div className="grid gap-4 md:grid-cols-2">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  title: "Promote Gender Equality",
-                  description: "Ensure equal opportunities and rights for all genders in community development initiatives.",
+                  title: "Lives Impacted",
+                  value: "30,000+",
+                  description: "Lives reached and positively impacted through our initiatives",
+                  icon: Users,
+                  color: "from-amber-500 to-amber-600",
+                  bgColor: "bg-amber-50/10"
                 },
                 {
-                  title: "Develop Learning Platforms",
-                  description: "Create accessible educational resources that empower communities with knowledge and skills.",
+                  title: "Communities Reached",
+                  value: "80+",
+                  description: "Communities across Africa benefiting from our programs",
+                  icon: Target,
+                  color: "from-blue-500 to-blue-600",
+                  bgColor: "bg-blue-50/10"
                 },
                 {
-                  title: "Strengthen Local Governance",
-                  description: "Support inclusive decision-making processes and accountable leadership at the community level.",
+                  title: "Funds Raised",
+                  value: "$25,000+",
+                  description: "Raised for activities and development projects",
+                  icon: Briefcase,
+                  color: "from-green-500 to-green-600",
+                  bgColor: "bg-green-50/10"
                 },
                 {
-                  title: "Advance Youth Leadership",
-                  description: "Cultivate the next generation of leaders through mentorship and practical opportunities.",
+                  title: "Global Reach",
+                  value: "60,000+",
+                  description: "People reached through different media platforms",
+                  icon: Globe,
+                  color: "from-purple-500 to-purple-600",
+                  bgColor: "bg-purple-50/10"
                 },
                 {
-                  title: "Foster Economic Resilience",
-                  description: "Build sustainable livelihoods and economic opportunities within vulnerable communities.",
-                },
-                {
-                  title: "Promote Environmental Sustainability",
-                  description: "Integrate ecological considerations into all development activities and community practices.",
-                },
-              ].map((objective, index) => (
+                  title: "Global Recognition",
+                  value: "30+",
+                  description: "Countries recognizing YAPD4Africa's impact",
+                  icon: Award,
+                  color: "from-pink-500 to-pink-600",
+                  bgColor: "bg-pink-50/10"
+                }
+              ].map((impact, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex rounded-lg border border-gray-200 bg-white p-5 transition-all duration-300 hover:border-[#008000] hover:shadow-md"
+                  className={`group relative ${impact.bgColor} rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/10 backdrop-blur-sm`}
                 >
-                  <div className="mr-4 mt-1 flex-shrink-0 rounded-full bg-[#e6f2e6] p-2">
-                    <Check className="h-5 w-5 text-[#008000]" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-start gap-5">
+                      <div className={`p-4 rounded-2xl bg-gradient-to-br ${impact.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                        <impact.icon className="h-7 w-7 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-black mb-2">
+                          {impact.value}
+                        </h3>
+                        <h4 className="text-lg font-semibold text-green-400 mb-2">
+                          {impact.title}
+                        </h4>
+                        <p className="text-black-300 leading-relaxed">
+                          {impact.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="mb-1 text-lg font-semibold text-gray-900">{objective.title}</h3>
-                    <p className="text-sm text-gray-600">{objective.description}</p>
-                  </div>
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-green-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.div>
               ))}
             </div>
           </div>
         </motion.div>
       </section>
-
-      {/* Core Focus Areas Section */}
-      <section className="section-padding bg-white">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="container-custom"
-        >
-          <SectionHeading 
-            title="Our Core Focus Areas" 
-            subtitle="Key domains of our impact"
-            centered
-          />
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            {[
-              { 
-                title: "Civic Engagement",
-                icon: "🤝",
-                desc: "Fostering active citizen participation in governance and community decision-making processes."
-              },
-              {
-                title: "Community Development",
-                icon: "🏘️",
-                desc: "Building sustainable and resilient communities through grassroots initiatives and local empowerment."
-              },
-              {
-                title: "Policy Advocacy",
-                icon: "📜",
-                desc: "Promoting policy changes that advance social justice and sustainable development."
-              },
-              {
-                title: "Empowerment",
-                icon: "⭐",
-                desc: "Equipping individuals with skills and resources to drive positive change in their communities."
-              }
-            ].map((focus, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 p-6 rounded-xl text-center hover:bg-gray-100 transition-all"
-              >
-                <div className="text-4xl mb-4">{focus.icon}</div>
-                <h3 className="text-xl font-semibold mb-3 text-[#008000]">{focus.title}</h3>
-                <p className="text-gray-600 text-sm">{focus.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-
-      <ImpactSection />
 
       <ApproachSection />
       <Partners />
