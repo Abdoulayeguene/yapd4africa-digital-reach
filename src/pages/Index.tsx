@@ -6,6 +6,7 @@ import About from "../components/home/About";
 import Mission from "../components/home/Mission";
 import Partners from "../components/home/Partners";
 import ApproachSection from "../components/home/ApproachSection";
+import ImpactSection from "../components/home/ImpactSection";
 import SectionHeading from "../components/ui/SectionHeading";
 
 const Index = () => {
@@ -131,42 +132,7 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* Impact Section */}
-      <section className="section-padding bg-[#008000]">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="container-custom text-white"
-        >
-          <SectionHeading 
-            title="Our Impact" 
-            subtitle="Making a difference across African communities"
-            centered
-            className="text-white"
-          />
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            {[
-              { number: "5,000+", label: "Youth Leaders Trained" },
-              { number: "25+", label: "Community Projects" },
-              { number: "15+", label: "Countries Reached" },
-              { number: "100K+", label: "Lives Impacted" }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="text-lg opacity-90">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+      <ImpactSection />
 
       <ApproachSection />
       <Partners />
