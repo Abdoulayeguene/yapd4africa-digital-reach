@@ -1,10 +1,23 @@
 
+import React from "react";
+import { motion } from "framer-motion";
+
+
 const ImpactSection = () => {
   return (
-    <section className="py-16 px-6 bg-green-50">
+    <section className="py-24 px-6 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-green-700 mb-6">Notre Impact</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            Notre <span className="text-blue-500">Impact</span>
+          </h2>
+          <div className="w-24 h-1 bg-blue-500 mx-auto mb-12"></div>
+        </motion.div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <p className="text-4xl font-bold text-green-800">30,000+</p>
             <p className="text-sm">Vies Touchées</p>
