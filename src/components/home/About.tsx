@@ -112,7 +112,7 @@ const About = () => {
               <div className="text-gray-700">Active Projects Across Africa</div>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
