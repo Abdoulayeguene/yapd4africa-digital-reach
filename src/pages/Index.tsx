@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Check } from "lucide-react";
 import Hero from "../components/home/Hero";
 import About from "../components/home/About";
 import Mission from "../components/home/Mission";
@@ -27,25 +28,51 @@ const Index = () => {
             centered
           />
 
-          <div className="grid md:grid-cols-2 gap-6 mt-12">
-            {[
-              { title: "Lifelong Learning & Development", desc: "Increase people's participation in lifelong skill opportunities, sustainable development, good governance and access to information." },
-              { title: "Policy & Accountability", desc: "Advocate for better policies, public accountability, civic participation and social development." },
-              { title: "Gender Equality", desc: "Advocate for gender equality especially in achieving and promoting girls and women rights at all levels." },
-              { title: "Innovation & Solutions", desc: "Develop innovative platforms for learning and addressing social, environmental and governance issues." },
-              { title: "Peace & Justice", desc: "Promote peace, social rights, justice and strong institutions for all." }
-            ].map((objective, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100"
-              >
-                <h3 className="text-xl font-semibold mb-4 text-[#008000]">{objective.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{objective.desc}</p>
-              </motion.div>
-            ))}
+          <div className="mx-auto max-w-4xl mt-12">
+            <div className="grid gap-4 md:grid-cols-2">
+              {[
+                {
+                  title: "Promote Gender Equality",
+                  description: "Ensure equal opportunities and rights for all genders in community development initiatives.",
+                },
+                {
+                  title: "Develop Learning Platforms",
+                  description: "Create accessible educational resources that empower communities with knowledge and skills.",
+                },
+                {
+                  title: "Strengthen Local Governance",
+                  description: "Support inclusive decision-making processes and accountable leadership at the community level.",
+                },
+                {
+                  title: "Advance Youth Leadership",
+                  description: "Cultivate the next generation of leaders through mentorship and practical opportunities.",
+                },
+                {
+                  title: "Foster Economic Resilience",
+                  description: "Build sustainable livelihoods and economic opportunities within vulnerable communities.",
+                },
+                {
+                  title: "Promote Environmental Sustainability",
+                  description: "Integrate ecological considerations into all development activities and community practices.",
+                },
+              ].map((objective, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex rounded-lg border border-gray-200 bg-white p-5 transition-all duration-300 hover:border-[#008000] hover:shadow-md"
+                >
+                  <div className="mr-4 mt-1 flex-shrink-0 rounded-full bg-[#e6f2e6] p-2">
+                    <Check className="h-5 w-5 text-[#008000]" />
+                  </div>
+                  <div>
+                    <h3 className="mb-1 text-lg font-semibold text-gray-900">{objective.title}</h3>
+                    <p className="text-sm text-gray-600">{objective.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </section>
