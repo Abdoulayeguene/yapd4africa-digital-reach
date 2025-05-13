@@ -26,21 +26,26 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Navigation Rapide</h3>
+            <h3 className="mb-4 text-lg font-semibold">Quick Navigation</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-gray-200 transition-colors hover:text-white">
-                  Accueil
+                  Home
                 </Link>
               </li>
               <li>
                 <Link to="/what-we-do" className="text-gray-200 transition-colors hover:text-white">
-                  Ce Que Nous Faisons
+                  What We Do
                 </Link>
               </li>
               <li>
                 <Link to="/who-are-we" className="text-gray-200 transition-colors hover:text-white">
-                  Qui Nous Sommes
+                  Who Are We
+                </Link>
+              </li>
+              <li>
+                <Link to="/reports" className="text-gray-200 transition-colors hover:text-white">
+                  Reports
                 </Link>
               </li>
               <li>
