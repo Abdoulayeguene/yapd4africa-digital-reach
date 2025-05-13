@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
-
-import React from "react";
-import { Link } from "react-router-dom";
-
 const Hero = () => {
   return (
     <section className="relative bg-[url('/hero-bg.jpg')] bg-cover bg-center text-white min-h-[90vh] flex items-center">
