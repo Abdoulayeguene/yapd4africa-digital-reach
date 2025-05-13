@@ -10,7 +10,6 @@ const Index = () => {
   return (
     <div className="overflow-x-hidden">
       <Hero />
-
       <About />
       <Mission />
 
@@ -98,29 +97,6 @@ const Index = () => {
                 <div className="text-4xl mb-4">{focus.icon}</div>
                 <h3 className="text-xl font-semibold mb-3 text-[#008000]">{focus.title}</h3>
                 <p className="text-gray-600 text-sm">{focus.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-            {[
-              { title: "Youth Leadership", icon: "👥", desc: "Empowering young leaders to drive change" },
-              { title: "Inclusivity", icon: "🤝", desc: "Ensuring diverse voices are heard and valued" },
-              { title: "Innovation", icon: "💡", desc: "Finding creative solutions to challenges" },
-              { title: "Sustainability", icon: "🌱", desc: "Creating lasting positive impact" },
-              { title: "Accountability", icon: "⚖️", desc: "Maintaining transparency in all actions" },
-              { title: "Collaboration", icon: "🤲", desc: "Working together for greater impact" }
-            ].map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all"
-              >
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 text-[#008000]">{value.title}</h3>
-                <p className="text-gray-600">{value.desc}</p>
               </motion.div>
             ))}
           </div>
