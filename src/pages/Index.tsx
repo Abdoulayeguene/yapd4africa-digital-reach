@@ -5,6 +5,7 @@ import Hero from "../components/home/Hero";
 import About from "../components/home/About";
 import Mission from "../components/home/Mission";
 import Partners from "../components/home/Partners";
+import ApproachSection from "../components/home/ApproachSection";
 import SectionHeading from "../components/ui/SectionHeading";
 
 const Index = () => {
@@ -167,6 +168,7 @@ const Index = () => {
         </motion.div>
       </section>
 
+      <ApproachSection />
       <Partners />
     </div>
   );
