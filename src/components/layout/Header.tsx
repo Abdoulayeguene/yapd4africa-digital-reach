@@ -28,10 +28,7 @@ const Header = () => {
 
   return (
     <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
-      )}
+      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm py-4"
     >
       <div className="container-custom">
         <div className="flex items-center justify-between">
@@ -50,10 +47,10 @@ const Header = () => {
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "font-medium transition-colors hover:text-secondary",
+                  "font-medium transition-colors hover:text-[#006400]",
                   location.pathname === item.href
-                    ? "text-secondary"
-                    : "text-primary"
+                    ? "text-[#008000]"
+                    : "text-[#008000]"
                 )}
               >
                 {item.name}
