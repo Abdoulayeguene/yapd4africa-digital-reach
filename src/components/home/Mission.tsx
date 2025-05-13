@@ -1,106 +1,113 @@
 
 import React from "react";
+import { motion } from "framer-motion";
 import SectionHeading from "../ui/SectionHeading";
-import { CheckCircle } from "lucide-react";
+import { Rocket, Eye, Award } from "lucide-react";
 
 const Mission = () => {
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-gradient-to-b from-white to-gray-50">
       <div className="container-custom">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
-          <div>
-            <SectionHeading title="Our Mission" />
-            <p className="text-gray-700 mb-6">
+        <div className="grid lg:grid-cols-2 gap-12 mb-20">
+          {/* Mission Section */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-[#008000]/10 rounded-lg">
+                <Rocket className="h-8 w-8 text-[#008000]" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">Our Mission</h2>
+            </div>
+            <p className="text-gray-700 leading-relaxed">
               To drive positive social change in Africa by mobilizing youth leadership, fostering inclusive governance, and advocating for sustainable development at the grassroots level.
             </p>
-            
-            <SectionHeading title="Our Vision" className="mt-12" />
-            <p className="text-gray-700 mb-6">
+          </motion.div>
+
+          {/* Vision Section */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-[#008000]/10 rounded-lg">
+                <Eye className="h-8 w-8 text-[#008000]" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">Our Vision</h2>
+            </div>
+            <p className="text-gray-700 leading-relaxed">
               An Africa where empowered youth lead the way in creating equitable, sustainable, and thriving communities through innovative approaches to social development.
             </p>
-          </div>
-          
-          <div>
-            <SectionHeading title="Core Values" />
-            <ul className="space-y-4">
-              <li className="flex">
-                <CheckCircle className="h-6 w-6 text-secondary mr-3 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-lg">Youth Leadership</h4>
-                  <p className="text-gray-600">Believing in the power and potential of young people to drive meaningful change</p>
-                </div>
-              </li>
-              <li className="flex">
-                <CheckCircle className="h-6 w-6 text-secondary mr-3 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-lg">Inclusivity</h4>
-                  <p className="text-gray-600">Ensuring diverse voices are heard and represented in development processes</p>
-                </div>
-              </li>
-              <li className="flex">
-                <CheckCircle className="h-6 w-6 text-secondary mr-3 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-lg">Innovation</h4>
-                  <p className="text-gray-600">Embracing creative solutions to address complex social challenges</p>
-                </div>
-              </li>
-              <li className="flex">
-                <CheckCircle className="h-6 w-6 text-secondary mr-3 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-lg">Sustainability</h4>
-                  <p className="text-gray-600">Developing initiatives that create lasting impact and can be maintained by communities</p>
-                </div>
-              </li>
-              <li className="flex">
-                <CheckCircle className="h-6 w-6 text-secondary mr-3 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-lg">Accountability</h4>
-                  <p className="text-gray-600">Maintaining transparency and responsibility in all our actions and partnerships</p>
-                </div>
-              </li>
-            </ul>
-          </div>
+          </motion.div>
         </div>
-        
+
+        {/* Core Values Section */}
         <div className="mt-16">
-          <SectionHeading title="Our Objectives" centered />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <h4 className="font-semibold text-xl mb-3 text-primary">Empower Youth</h4>
-              <p className="text-gray-600">
-                Develop leadership skills and provide opportunities for young people to participate in community development initiatives.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <h4 className="font-semibold text-xl mb-3 text-primary">Promote Inclusive Governance</h4>
-              <p className="text-gray-600">
-                Foster transparent, participatory, and accountable governance systems at local and national levels.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <h4 className="font-semibold text-xl mb-3 text-primary">Strengthen Communities</h4>
-              <p className="text-gray-600">
-                Build resilience and capacity within African communities to address their own development challenges.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <h4 className="font-semibold text-xl mb-3 text-primary">Drive Innovation</h4>
-              <p className="text-gray-600">
-                Develop and implement creative solutions to persistent social problems across the continent.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <h4 className="font-semibold text-xl mb-3 text-primary">Advocate for Change</h4>
-              <p className="text-gray-600">
-                Amplify community voices and advocate for policies that support sustainable development and social justice.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <h4 className="font-semibold text-xl mb-3 text-primary">Foster Partnerships</h4>
-              <p className="text-gray-600">
-                Build strategic alliances with diverse stakeholders to maximize impact and resource mobilization.
-              </p>
-            </div>
+          <SectionHeading 
+            title="Core Values" 
+            subtitle="The principles that guide our work"
+            centered
+          />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="group relative overflow-hidden rounded-2xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846"
+                alt="Youth Leadership"
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20 p-6 flex flex-col justify-end">
+                <Award className="h-8 w-8 text-white mb-3" />
+                <h3 className="text-xl font-semibold text-white mb-2">Youth Leadership</h3>
+                <p className="text-white/90 text-sm">Empowering young leaders to drive change in their communities</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="group relative overflow-hidden rounded-2xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1556484687-30636164638b"
+                alt="Innovation"
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20 p-6 flex flex-col justify-end">
+                <Award className="h-8 w-8 text-white mb-3" />
+                <h3 className="text-xl font-semibold text-white mb-2">Innovation</h3>
+                <p className="text-white/90 text-sm">Finding creative solutions to address complex social challenges</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="group relative overflow-hidden rounded-2xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                alt="Collaboration"
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20 p-6 flex flex-col justify-end">
+                <Award className="h-8 w-8 text-white mb-3" />
+                <h3 className="text-xl font-semibold text-white mb-2">Collaboration</h3>
+                <p className="text-white/90 text-sm">Working together for greater impact across communities</p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
