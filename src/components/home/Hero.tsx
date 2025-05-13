@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -7,11 +8,10 @@ const Hero = () => {
       <div className="bg-black/50 absolute inset-0" />
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">
-          Advancing social development and empowering African grassroots communities
-          through youth-led empowerment, inclusive governance and advocacy.
+          Faire avancer le développement social et autonomiser les communautés locales africaines grâce à l'autonomisation des jeunes, à la gouvernance inclusive et au plaidoyer.
         </h1>
         <Link to="#about" className="inline-block mt-4 px-6 py-3 bg-green-700 hover:bg-green-800 text-white font-semibold rounded shadow">
-          Learn More
+          En Savoir Plus
         </Link>
       </div>
     </section>
