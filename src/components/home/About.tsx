@@ -38,7 +38,7 @@ const About = () => {
                 transition={{ delay: 0.2 }}
                 className="text-gray-700 leading-relaxed"
               >
-                YAPD4Africa is a youth-led organization advancing social development in Africa, focusing on grassroots communities. We believe in the transformative power of youth leadership in driving sustainable change and community empowerment.
+                Founded in 2017, Connected Youth for Accountability, Peace and Development Initiative (YAPD4Africa) is a renowned youth-led nonprofit and civic society organization. Our dedicated mission is to build strong people and sustainable communities in Africa.
               </motion.p>
               
               <motion.p 
@@ -47,7 +47,7 @@ const About = () => {
                 transition={{ delay: 0.3 }}
                 className="text-gray-700 leading-relaxed"
               >
-                Through strategic partnerships with community leaders, government agencies, and international organizations, we develop and implement initiatives that address pressing social challenges across the continent.
+                Our primary focus is empowering people with the right knowledge and skills to advocate for their rights and community development across the continent through our various homegrown initiatives and projects.
               </motion.p>
             </div>
 
