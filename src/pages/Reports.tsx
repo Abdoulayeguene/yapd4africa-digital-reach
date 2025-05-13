@@ -1,7 +1,7 @@
-
 import React from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { Download, FileText } from "lucide-react";
+import { motion } from "framer-motion";
+import { Download, FileText, BookOpen, BarChart2, Calendar, Users } from "lucide-react";
 
 const Reports = () => {
   const annualReports = [
@@ -15,32 +15,38 @@ const Reports = () => {
     { 
       title: "Youth Leadership Academy Impact Assessment",
       date: "November 2023",
-      size: "3.2 MB"
+      size: "3.2 MB",
+      icon: Users
     },
     { 
       title: "Community Innovation Hubs: First Year Outcomes",
       date: "September 2023",
-      size: "1.7 MB"
+      size: "1.7 MB",
+      icon: BarChart2
     },
     { 
       title: "Digital Empowerment Program Evaluation",
       date: "July 2023",
-      size: "2.5 MB"
+      size: "2.5 MB",
+      icon: BookOpen
     },
     { 
       title: "Inclusive Governance Initiative: Midterm Review",
       date: "March 2023",
-      size: "1.9 MB"
+      size: "1.9 MB",
+      icon: Users
     },
     { 
       title: "Green Communities Project: Environmental Impact",
       date: "December 2022",
-      size: "2.3 MB"
+      size: "2.3 MB",
+      icon: BarChart2
     },
     { 
       title: "Health Access Alliance: Community Outcomes",
       date: "October 2022",
-      size: "1.6 MB"
+      size: "1.6 MB",
+      icon: BookOpen
     },
   ];
 
@@ -49,40 +55,69 @@ const Reports = () => {
       title: "Youth-Led Development in African Communities",
       author: "YAPD4Africa Research Team",
       date: "February 2023",
-      size: "1.5 MB"
+      size: "1.5 MB",
+      image: "/images/publications/youth-development.jpg"
     },
     { 
       title: "Inclusive Governance: Lessons from Grassroots Initiatives",
       author: "Dr. Sarah Johnson & Michael Okafor",
       date: "November 2022",
-      size: "1.8 MB"
+      size: "1.8 MB",
+      image: "/images/publications/governance.jpg"
     },
     { 
       title: "Digital Inclusion and Rural Development",
       author: "David Mensah & Amina Diallo",
       date: "August 2022",
-      size: "2.1 MB"
+      size: "2.1 MB",
+      image: "/images/publications/digital-inclusion.jpg"
     },
     { 
       title: "Climate Resilience Strategies for African Communities",
       author: "YAPD4Africa in collaboration with Climate Action Network",
       date: "May 2022",
-      size: "2.4 MB"
+      size: "2.4 MB",
+      image: "/images/publications/climate-resilience.jpg"
     },
   ];
 
   return (
     <div className="pt-24">
       {/* Hero Section */}
-      <section className="bg-primary py-16 md:py-24">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Reports & Publications
-            </h1>
-            <p className="text-xl text-white/90">
-              Access our annual reports, project evaluations, and research publications to learn about our impact and insights.
-            </p>
+      <section className="relative bg-gradient-to-br from-emerald-600 to-emerald-800 py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat opacity-10"></div>
+          <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-white/10 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        <div className="container-custom relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center lg:text-left"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Reports & Publications
+              </h1>
+              <p className="text-xl text-white/90 leading-relaxed">
+                Access our annual reports, project evaluations, and research publications to learn about our impact and insights.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl"
+            >
+              <img
+                src="/images/reports-hero.jpg"
+                alt="Reports and Publications"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -95,51 +130,78 @@ const Reports = () => {
             subtitle="Comprehensive overviews of our yearly activities and impact"
           />
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             {annualReports.map((report, index) => (
-              <div key={index} className="bg-gray-50 border border-gray-100 rounded-lg overflow-hidden">
-                <div className="bg-primary p-6 text-white text-center">
-                  <FileText className="h-12 w-12 mx-auto mb-2" />
-                  <h3 className="text-2xl font-bold">{report.year}</h3>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-emerald-100 transition-all duration-300 overflow-hidden"
+              >
+                <div className="bg-gradient-to-br from-emerald-600 to-emerald-800 p-8 text-white text-center">
+                  <FileText className="h-12 w-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                  <h3 className="text-3xl font-bold">{report.year}</h3>
                 </div>
                 <div className="p-6">
-                  <h4 className="font-medium mb-2">{report.title}</h4>
+                  <h4 className="font-medium mb-2 text-gray-900">{report.title}</h4>
                   <p className="text-sm text-gray-500 mb-4">PDF • {report.size}</p>
-                  <a 
+                  <motion.a 
                     href="#" 
-                    className="flex items-center justify-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-md font-medium transition-colors w-full"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center gap-2 bg-emerald-600 text-white hover:bg-emerald-700 px-6 py-3 rounded-full font-medium transition-colors w-full"
                   >
                     <Download className="h-4 w-4" />
-                    Download
-                  </a>
+                    Download Report
+                  </motion.a>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Project Reports Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gradient-to-br from-gray-50 via-white to-gray-50">
         <div className="container-custom">
           <SectionHeading 
             title="Project Reports" 
             subtitle="Detailed evaluations and outcomes of our initiatives"
           />
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {projectReports.map((report, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-lg font-semibold mb-2">{report.title}</h3>
-                <p className="text-sm text-gray-500 mb-4">{report.date} • PDF • {report.size}</p>
-                <a 
-                  href="#" 
-                  className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
-                >
-                  <Download className="h-4 w-4" />
-                  Download Report
-                </a>
-              </div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-emerald-100 transition-all duration-300 overflow-hidden"
+              >
+                <div className="p-8">
+                  <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <report.icon className="h-8 w-8 text-emerald-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
+                    {report.title}
+                  </h3>
+                  <div className="flex items-center gap-2 text-gray-500 mb-4">
+                    <Calendar className="h-4 w-4" />
+                    <span>{report.date}</span>
+                  </div>
+                  <p className="text-sm text-gray-500 mb-6">PDF • {report.size}</p>
+                  <motion.a 
+                    href="#" 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium"
+                  >
+                    <Download className="h-4 w-4" />
+                    Download Report
+                  </motion.a>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -153,38 +215,79 @@ const Reports = () => {
             subtitle="Original research and insights from our work"
           />
           
-          <div className="grid md:grid-cols-2 gap-6 mt-8">
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
             {researchPublications.map((publication, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-2">{publication.title}</h3>
-                <p className="text-secondary mb-1">{publication.author}</p>
-                <p className="text-sm text-gray-500 mb-4">{publication.date} • PDF • {publication.size}</p>
-                <a 
-                  href="#" 
-                  className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
-                >
-                  <Download className="h-4 w-4" />
-                  Download Publication
-                </a>
-              </div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-emerald-100 transition-all duration-300 overflow-hidden"
+              >
+                <div className="relative h-48 w-full">
+                  <img
+                    src={publication.image}
+                    alt={publication.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
+                    {publication.title}
+                  </h3>
+                  <p className="text-emerald-600 font-medium mb-2">{publication.author}</p>
+                  <div className="flex items-center gap-2 text-gray-500 mb-6">
+                    <Calendar className="h-4 w-4" />
+                    <span>{publication.date}</span>
+                    <span>•</span>
+                    <span>PDF • {publication.size}</span>
+                  </div>
+                  <motion.a 
+                    href="#" 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium"
+                  >
+                    <Download className="h-4 w-4" />
+                    Download Publication
+                  </motion.a>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Request Reports Section */}
-      <section className="section-padding bg-primary">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Can't Find What You're Looking For?
-            </h2>
-            <p className="text-xl mb-8">
-              Contact us to request specific reports or publications that are not listed on this page.
-            </p>
-            <a href="/contact" className="btn-secondary inline-block">
-              Request a Report
-            </a>
+      <section className="relative section-padding bg-gradient-to-br from-emerald-600 to-emerald-800 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat opacity-10"></div>
+          <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-white/10 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        <div className="container-custom relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Can't Find What You're Looking For?
+              </h2>
+              <p className="text-xl text-white/90 mb-8">
+                Contact us to request specific reports or publications that are not listed on this page.
+              </p>
+              <motion.a
+                href="/contact"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block bg-white text-emerald-600 px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Request a Report
+              </motion.a>
+            </motion.div>
           </div>
         </div>
       </section>
