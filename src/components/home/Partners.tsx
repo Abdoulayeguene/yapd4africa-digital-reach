@@ -1,14 +1,31 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeading from "../ui/SectionHeading";
 import { Mail, Phone, MapPin, Instagram, Facebook, Twitter, Linkedin, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Partners = () => {
-  const partners = Array(6).fill(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const partners = [
+    { name: "ALDA", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
+    { name: "WYDE", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
+    { name: "Partner 3", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
+    { name: "Partner 4", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
+    { name: "Partner 5", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
+    { name: "Partner 6", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % partners.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white overflow-hidden">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Announcement Section */}
@@ -92,23 +109,49 @@ const Partners = () => {
           </div>
         </div>
 
-        <SectionHeading 
-          title="Our Partners" 
-          subtitle="Collaborating with leading organizations to maximize our impact"
-          centered 
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <SectionHeading 
+            title="Our Partners" 
+            subtitle="Collaborating with leading organizations to maximize our impact"
+            centered 
+          />
+        </motion.div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-          {partners.map((_, index) => (
-            <div 
-              key={index} 
-              className="bg-gray-100 aspect-square rounded-lg flex items-center justify-center p-4"
+        <div className="relative mt-12">
+          <div className="flex gap-8 overflow-hidden py-4">
+            <motion.div 
+              className="flex gap-8 animate-slide"
+              style={{
+                transform: `translateX(-${currentIndex * (100 / partners.length)}%)`,
+                transition: 'transform 0.5s ease-in-out'
+              }}
             >
-              <div className="w-full h-full bg-gray-200 rounded flex items-center justify-center">
-                <span className="text-gray-400 text-sm">Partner Logo</span>
-              </div>
-            </div>
-          ))}
+              {partners.map((partner, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex-shrink-0 w-[200px] aspect-square bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group"
+                >
+                  <div className="w-full h-full relative">
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <span className="text-white font-medium">{partner.name}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
         
         <div className="mt-12 text-center">
