@@ -8,16 +8,24 @@ const Partners = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const partners = [
-    { name: "ALDA", logo: "/lovable-uploads/Donors and Partners/IMG_3108.PNG" },
-    { name: "WYDE", logo: "/lovable-uploads/Donors and Partners/IMG_3109.PNG" },
-    { name: "USAID", logo: "/lovable-uploads/Donors and Partners/IMG_3110.PNG" },
-    { name: "OSIWA", logo: "/lovable-uploads/Donors and Partners/IMG_3113.PNG" },
-    { name: "CIVICUS", logo: "/lovable-uploads/Donors and Partners/IMG_3114.PNG" },
-    { name: "UNDEF", logo: "/lovable-uploads/Donors and Partners/IMG_3115.PNG" },
-    { name: "VOICE", logo: "/lovable-uploads/Donors and Partners/IMG_3116.PNG" },
-    { name: "OXFAM", logo: "/lovable-uploads/Donors and Partners/IMG_3117.JPG" },
-    { name: "EU", logo: "/lovable-uploads/Donors and Partners/IMG_3118.PNG" },
-    { name: "AFRICTIVISTES", logo: "/lovable-uploads/Donors and Partners/IMG_3119.JPG" }
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3108.PNG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3109.PNG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3110.PNG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3113.PNG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3114.PNG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3115.PNG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3116.PNG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3117.JPG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3118.PNG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3119.JPG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3121.JPG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3122.JPG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3125.JPG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3126.PNG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG_3253.PNG" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG-20220512-WA0001.jpg" },
+    { logo: "/lovable-uploads/Donors and Partners/IMG-20220515-WA0002.jpg" }
+
   ];
 
   useEffect(() => {
