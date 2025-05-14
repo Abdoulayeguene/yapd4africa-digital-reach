@@ -22,7 +22,7 @@ const Index = () => {
           <div className="absolute inset-0">
             <div className="absolute top-0 left-0 w-full h-full bg-[url('/pattern.svg')] bg-repeat opacity-10"></div>
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-green-500/20 to-green-500/20 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-green-500/20 to-green-500/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-gray-500/20 to-gray-500/20 rounded-full blur-3xl"></div>
           </div>
         </div>
 
