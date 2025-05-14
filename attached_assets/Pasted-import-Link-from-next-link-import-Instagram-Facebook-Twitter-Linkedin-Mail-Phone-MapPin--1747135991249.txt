@@ -47,7 +47,7 @@ export function Footer() {
 
           {/* Contact Information */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Contactez-nous</h3>
+            <h3 className="mb-4 text-lg font-semibold">Contactez-us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail className="mr-2 h-5 w-5 flex-shrink-0 text-gray-200" />
@@ -106,14 +106,14 @@ export function Footer() {
                 href="/contact"
                 className="inline-block rounded-md border border-white px-4 py-2 text-sm font-medium transition-colors hover:bg-white hover:text-[#004d00]"
               >
-                Contactez-nous
+                Contactez-us
               </Link>
             </div>
           </div>
         </div>
 
         <div className="mt-12 border-t border-white/20 pt-6 text-center text-sm">
-          <p>© {new Date().getFullYear()} YAPD4Africa. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} YAPD4Africa. All rights reserved.</p>
         </div>
       </div>
     </footer>
