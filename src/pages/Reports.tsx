@@ -84,7 +84,7 @@ const Reports = () => {
   return (
     <div className="pt-24">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-600 to-emerald-800 py-24 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-emerald-500 to-emerald-800 py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat opacity-10"></div>
           <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-3xl"></div>
@@ -99,24 +99,24 @@ const Reports = () => {
               className="text-center lg:text-left"
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Reports & Publications
+              Reports & Publications
               </h1>
               <p className="text-xl text-white/90 leading-relaxed">
-                Access our annual reports, project evaluations, and research publications to learn about our impact and insights.
+              Access our annual reports, project evaluations, and research publications to learn about our impact and insights.
               </p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl"
+              className="relative h-[350px] rounded-3xl overflow-hidden shadow-2xl" // Increased height from 300px to 350px
             >
               <img
-                src="/images/reports-hero.jpg"
-                alt="Reports and Publications"
+                src="/lovable-uploads/logoyapd.png"
+                alt="YAPD4Africa Initiatives"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-800/50 to-transparent"></div>
             </motion.div>
           </div>
         </div>

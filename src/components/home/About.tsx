@@ -109,7 +109,7 @@ const About = () => {
             className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl"
           >
             <img
-              src="/about-image.jpg"
+              src="lovable-uploads/Home/IMG_0549.jpeg"
               alt="YAPD4Africa Team"
               className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"
             />

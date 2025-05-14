@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import SectionHeading from "../ui/SectionHeading";
 import { Mail, Phone, MapPin, Instagram, Facebook, Twitter, Linkedin, ArrowUpRight } from "lucide-react";
@@ -9,12 +8,16 @@ const Partners = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const partners = [
-    { name: "ALDA", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
-    { name: "WYDE", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
-    { name: "Partner 3", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
-    { name: "Partner 4", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
-    { name: "Partner 5", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
-    { name: "Partner 6", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" },
+    { name: "ALDA", logo: "/lovable-uploads/Donors and Partners/IMG_3108.PNG" },
+    { name: "WYDE", logo: "/lovable-uploads/Donors and Partners/IMG_3109.PNG" },
+    { name: "USAID", logo: "/lovable-uploads/Donors and Partners/IMG_3110.PNG" },
+    { name: "OSIWA", logo: "/lovable-uploads/Donors and Partners/IMG_3113.PNG" },
+    { name: "CIVICUS", logo: "/lovable-uploads/Donors and Partners/IMG_3114.PNG" },
+    { name: "UNDEF", logo: "/lovable-uploads/Donors and Partners/IMG_3115.PNG" },
+    { name: "VOICE", logo: "/lovable-uploads/Donors and Partners/IMG_3116.PNG" },
+    { name: "OXFAM", logo: "/lovable-uploads/Donors and Partners/IMG_3117.JPG" },
+    { name: "EU", logo: "/lovable-uploads/Donors and Partners/IMG_3118.PNG" },
+    { name: "AFRICTIVISTES", logo: "/lovable-uploads/Donors and Partners/IMG_3119.JPG" }
   ];
 
   useEffect(() => {
@@ -138,14 +141,14 @@ const Partners = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex-shrink-0 w-[200px] aspect-square bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group"
                 >
-                  <div className="w-full h-full relative">
+                  <div className="w-full h-full relative flex items-center justify-center p-4">
                     <img 
                       src={partner.logo} 
                       alt={partner.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-contain max-w-[180px] max-h-[180px]"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="text-white font-medium">{partner.name}</span>
+                      <span className="text-white font-medium text-center px-2">{partner.name}</span>
                     </div>
                   </div>
                 </motion.div>

@@ -7,7 +7,7 @@ const WhatWeDo = () => {
   return (
     <div className="pt-24">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-600 to-emerald-800 py-24 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-emerald-500 to-emerald-800 py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat opacity-10"></div>
           <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-3xl"></div>
@@ -32,14 +32,14 @@ const WhatWeDo = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl"
+              className="relative h-[350px] rounded-3xl overflow-hidden shadow-2xl" // Increased height from 300px to 350px
             >
               <img
-                src="/images/hero-what-we-do.jpg"
+                src="/lovable-uploads/logoyapd.png"
                 alt="YAPD4Africa Initiatives"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-800/50 to-transparent"></div>
             </motion.div>
           </div>
         </div>
@@ -78,7 +78,7 @@ const WhatWeDo = () => {
               className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl"
             >
               <img
-                src="/images/approach-overview.jpg"
+                src="/lovable-uploads/What We Do /CAL.jpeg"
                 alt="Our Approach"
                 className="w-full h-full object-cover"
               />
@@ -99,36 +99,32 @@ const WhatWeDo = () => {
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             {[
               {
-                icon: Users,
                 number: "01",
                 title: "Community Action-Led Initiative (CAL)",
                 description: "A comprehensive civic education program aimed at empowering and educating underserved marginalized communities to understand their rights, responsibilities and duties as citizens. Currently operating in Nigeria and Cameroon.",
                 impact: "Addressing the lack of knowledge regarding civic participatory mechanisms in Sub-Saharan Africa.",
-                image: "/images/initiatives/cal.jpg"
+                image: "/lovable-uploads/What We Do /exemple.png"
               },
               {
-                icon: Lightbulb,
                 number: "02",
                 title: "Murya",
                 description: "An innovative civic tech initiative designed to bridge the gaps between citizens' needs and government projects. Provides a platform for citizens to voice their concerns about service delivery and empowers the government with data-driven evidence reports.",
                 impact: "Enabling better alignment of government projects with essential citizen needs.",
-                image: "/images/initiatives/murya.jpg"
+                image: "/lovable-uploads/What We Do /Rescue Mission Against Covid.jpg"
               },
               {
-                icon: Vote,
                 number: "03",
                 title: "Kuri'a",
                 description: "A citizen-led initiative that combines digital and physical engagement to promote electoral accountability, transparency and inclusiveness in Nigeria. Through mobile and web platforms, community outreach and physical events.",
                 impact: "Empowering citizens to participate actively in the electoral process and demand good governance.",
-                image: "/images/initiatives/kuria.jpg"
+                image: "/lovable-uploads/What We Do /We Need Peace.JPG"
               },
               {
-                icon: Leaf,
                 number: "04",
                 title: "Rescue A Girl Initiative",
                 description: "A social enterprise empowering hard-to-reach marginalized grassroots girls and women through the provision of eco-friendly reusable sanitary products.",
                 impact: "Protecting the environment while addressing women's health needs.",
-                image: "/images/initiatives/rescue-girl.jpg"
+                image: "/lovable-uploads/What We Do /RAG.jpeg"
               }
             ].map((initiative, index) => (
               <motion.div
@@ -148,9 +144,6 @@ const WhatWeDo = () => {
                 </div>
                 <div className="p-8">
                   <div className="relative z-10">
-                    <div className="mb-6 inline-flex rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 p-4 text-white shadow-lg transition-all duration-300 group-hover:scale-110">
-                      <initiative.icon className="h-7 w-7" />
-                    </div>
                     <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
                       <span className="text-lg font-bold text-emerald-600">{initiative.number}</span>
                     </div>
@@ -177,31 +170,31 @@ const WhatWeDo = () => {
         <div className="container-custom">
           <SectionHeading
             title="Other Projects"
-            subtitle="Collaborative initiatives with partners and communities"
+            subtitle=""
           />
           
           <div className="space-y-8 mt-12">
             {[
               {
                 title: "Who Is Almajiri Project",
-                description: "An active project in northern Nigeria advocating for the rights of street children. The project developed policy recommendations for reducing school dropout rates through sustainable reformation for both Almajiri and other street children.",
-                impact: "Successfully led to the signing of a bill to establish a national commission for Almajiris and out-of-school children by former President Mohammad Buhari in 2023.",
-                tags: ["Education", "Policy Change", "Child Rights"],
-                image: "/images/projects/almajiri.jpg"
+                description: "It was among the active projects in the northern Nigeria region that advocated for the rights of street children in the past 5 years. The project has a policy recommendation on how to reduce the high rate of dropout school children through a sustainable reformation for both Almajiri and other street children.",
+                impact: "After all the advocacies at the national level, the bill to establish a national commission for Almajiris and many out of school children was signed by the former President of Nigeria, his Excellency Mohammad Buhari in 2023.",
+                tags: ["projects", "Nigeria region that advocated ", "Almajiris"],
+                image: "/lovable-uploads/What We Do /yapd4africa1.png"
               },
               {
-                title: "Rescue Mission against COVID-19",
-                description: "A short-term project from March to May 2020 that directly impacted 500 beneficiaries while using social media to mobilize over 1000 young people for COVID-19 awareness and resource mobilization.",
-                impact: "Distributed relief materials to vulnerable groups, including orphanage homes, and provided homemade face masks and sanitizers.",
-                tags: ["Health", "Emergency Response", "Community Support"],
-                image: "/images/projects/covid.jpg"
+                title: "Rescue Mission against COVID-19 Project",
+                description: "This project was a short-term activity within 2 months from March to May 2020. Through the project, YAPD4Africa directly impacted 500 beneficiaries while we used our social media as a digital tool to mobilize over 1000 young people to create awareness on the prevention of the COVID-19 disease and help raise resources for the project execution.",
+                impact: "This project also helps to distribute relief materials to the most vulnerable groups of people especially orphanage homes, providing homemade face masks and sanitizers to supplement the low and overpriced supply.",
+                tags: ["Health", "Emergency Response", "Community Support", "COVID-19 Relief"],
+                image: "/lovable-uploads/What We Do /yapd4africa2.png"
               },
               {
                 title: "We Need Peace Project",
-                description: "Implemented from September 2018 to March 2019, engaging community leaders, religious scholars, security agents, and political parties to promote peace as a tool for all.",
-                impact: "Contributed to peaceful, free, and fair elections through community engagement and advocacy.",
+                description: "We have successfully implemented our 'We Need Peace' project from 8th September, 2018 to 31st March, 2019. This project took us about 7 months to advocate and engage with different community leaders, religion scholars, security agents and political parties on how they can contribute toward promoting peace as a tool for all and at the end of the day, it turned out the elections were conducted peacefully and it was also free and fair.",
+                impact: "This project has contributed to peaceful, free and fair elections through community engagement and advocacy.",
                 tags: ["Peace Building", "Community Engagement", "Advocacy"],
-                image: "/images/projects/peace.jpg"
+                image: "/lovable-uploads/What We Do /exemple.png"
               }
             ].map((project, index) => (
               <motion.div
@@ -285,7 +278,7 @@ const WhatWeDo = () => {
               className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl"
             >
               <img
-                src="/images/get-involved.jpg"
+                src="/lovable-uploads/logoyapd.png"
                 alt="Get Involved"
                 className="w-full h-full object-cover"
               />
