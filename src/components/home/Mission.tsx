@@ -66,37 +66,37 @@ const Mission = () => {
                 {
                   title: "Innovation",
                   description: "Pioneering creative solutions for community development",
-                  image: "lovable-uploads/Our Core Values/Collaboration and Parntership.JPG",
+                  image: "/lovable-uploads/OurCoreValues/Innovation.png",
                   color: "from-blue-500 to-blue-600"
                 },
                 {
                   title: "Teamwork Ethic",
                   description: "Working together with dedication and purpose",
-                  image: "lovable-uploads/Our Core Values/Commitment and Make Difference.jpg",
+                  image: "/lovable-uploads/OurCoreValues/Teamwork.jpg",
                   color: "from-purple-500 to-purple-600"
                 },
                 {
                   title: "Gender Inclusivity",
                   description: "Ensuring equal opportunities and representation",
-                  image: "lovable-uploads/Our Core Values/Gender Inclusivity.jpg",
+                  image: "/lovable-uploads/OurCoreValues/Gender Inclusivity.jpg",
                   color: "from-pink-500 to-pink-600"
                 },
                 {
-                  title: "Transparency",
+                  title: "Transparency and Accountability",
                   description: "Maintaining accountability in all our actions",
-                  image: "lovable-uploads/Our Core Values/Teamwork.jpg",
+                  image: "/lovable-uploads/OurCoreValues/Transparency and Accountability.jpeg",
                   color: "from-green-500 to-green-600"
                 },
                 {
-                  title: "Commitment",
+                  title: "Commitment and Make Difference",
                   description: "Dedicated to making a lasting difference",
-                  image: "lovable-uploads/Our Core Values/Transparency and Accountability.jpeg",
+                  image: "/lovable-uploads/OurCoreValues/Commitment and Make Difference.jpg",
                   color: "from-amber-500 to-amber-600"
                 },
                 {
-                  title: "Partnership",
+                  title: "Collaboration and Parntership",
                   description: "Building strong collaborations for greater impact",
-                  image: "lovable-uploads/Home/IMG_3127.jpeg", 
+                  image: "/lovable-uploads/OurCoreValues/Collaboration and Parntership.JPG", 
                   color: "from-red-500 to-red-600"
                 }
               ].map((value, index) => (

@@ -64,7 +64,7 @@ const Index = () => {
                 },
                 {
                   title: "Communities Reached",
-                  value: "80+",
+                  value: "100+",
                   description: "Communities across Africa benefiting from our programs",
                   icon: Target,
                   color: "from-blue-500 to-blue-600",

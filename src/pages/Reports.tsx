@@ -207,7 +207,7 @@ const Reports = () => {
         </div>
       </section>
 
-      {/* Research Publications Section */}
+      {/* Research Publications Section 
       <section className="section-padding bg-white">
         <div className="container-custom">
           <SectionHeading 
@@ -257,7 +257,7 @@ const Reports = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Request Reports Section */}
       <section className="relative section-padding bg-gradient-to-br from-emerald-600 to-emerald-800 overflow-hidden">

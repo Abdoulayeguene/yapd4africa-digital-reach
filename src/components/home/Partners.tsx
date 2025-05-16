@@ -57,7 +57,7 @@ const Partners = () => {
             </p>
 
             <a
-              href="https://www.alda-europe.eu"
+              href="https://www.alda-europe.eu/meet-the-10-selected-organisations-from-the-3rd-call-for-proposals-of-the-wyde-civic-engagement-project/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-[#008000] text-white px-4 py-2 rounded hover:bg-[#006800]"
@@ -152,11 +152,11 @@ const Partners = () => {
                   <div className="w-full h-full relative flex items-center justify-center p-4">
                     <img 
                       src={partner.logo} 
-                      alt={partner.name}
+                      alt={`Partner logo ${index + 1}`}
                       className="w-full h-full object-contain max-w-[180px] max-h-[180px]"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="text-white font-medium text-center px-2">{partner.name}</span>
+                      <span className="text-white font-medium text-center px-2">Partner {index + 1}</span>
                     </div>
                   </div>
                 </motion.div>
