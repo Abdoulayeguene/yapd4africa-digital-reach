@@ -17,7 +17,7 @@ const Hero = () => {
         transition={{ duration: 0.8, delay: 0.8 }}
       >
         <a 
-          href="https://linkedin.com" 
+          href="https://www.linkedin.com/company/youth-awareness-for-peace-and-development/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group relative bg-white/20 p-3 md:p-4 rounded-full hover:bg-[#0A66C2] text-[#0A66C2] hover:text-white transition-all duration-300"
@@ -28,7 +28,7 @@ const Hero = () => {
           </span>
         </a>
         <a 
-          href="https://twitter.com" 
+          href="https://x.com/yapd4africa?s=21" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group relative bg-white/20 p-3 md:p-4 rounded-full hover:bg-black text-black hover:text-white transition-all duration-300"
@@ -39,7 +39,7 @@ const Hero = () => {
           </span>
         </a>
         <a 
-          href="https://instagram.com" 
+          href="https://www.instagram.com/yapd_4africa/?igshid=MzRlODBiNWFlZA" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group relative bg-white/20 p-3 md:p-4 rounded-full hover:bg-gradient-to-br from-[#FF0069] via-[#E4405F] to-[#FE9D41] text-[#E4405F] hover:text-white transition-all duration-300"
@@ -50,7 +50,7 @@ const Hero = () => {
           </span>
         </a>
         <a 
-          href="https://facebook.com" 
+          href="https://www.facebook.com/YAPD4Africa?mibextid=9R9pXO" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group relative bg-white/20 p-3 md:p-4 rounded-full hover:bg-[#1877F2] text-[#1877F2] hover:text-white transition-all duration-300"
@@ -61,7 +61,7 @@ const Hero = () => {
           </span>
         </a>
         <a 
-          href="https://youtube.com" 
+          href="https://www.youtube.com/@yapd4africa" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group relative bg-white/20 p-3 md:p-4 rounded-full hover:bg-[#FF0000] text-[#FF0000] hover:text-white transition-all duration-300"
@@ -84,7 +84,7 @@ const Hero = () => {
       </motion.div>
       <div className="absolute inset-0 z-0">
         <img
-          src="lovable-uploads/Home/IMG_3127.jpeg"
+          src="lovable-uploads/Home/image_accueil.png"
           alt="African community"
           className="object-cover w-full h-full"
           style={{ filter: 'brightness(0.4)' }}

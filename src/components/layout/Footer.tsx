@@ -67,7 +67,7 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Contactez-us</h3>
+            <h3 className="mb-4 text-lg font-semibold">Contact-Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail className="mr-2 h-5 w-5 flex-shrink-0 text-gray-200" />
@@ -90,7 +90,7 @@ const Footer = () => {
 
           {/* Social Media */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Suivez-nous</h3>
+            <h3 className="mb-4 text-lg font-semibold">Follow Us</h3>
             <div className="flex flex-wrap gap-3">
               <a
                 href="#"
@@ -126,7 +126,7 @@ const Footer = () => {
                 to="/contact"
                 className="inline-block rounded-md border border-white px-4 py-2 text-sm font-medium transition-colors hover:bg-white hover:text-[#004d00]"
               >
-                Contactez-us
+                Contact-Us
               </Link>
             </div>
           </div>

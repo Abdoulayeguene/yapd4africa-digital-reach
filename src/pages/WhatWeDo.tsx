@@ -61,14 +61,11 @@ const WhatWeDo = () => {
               
               <div className="prose max-w-none text-gray-700 mt-8">
                 <p className="text-lg leading-relaxed">
-                  At YAPD4Africa, we implement a holistic approach to social development through our CARE-SD methodology, which stands for Community-Led, Adaptive Learning, Resource Mobilization, Empowerment Focus, Sustainable Impact, and Diverse Partnerships.
-                </p>
+                At YAPD4Africa, our comprehensive CARE-SD framework guides our work in community development, ensuring sustainable impact through six interconnected pillars.                 </p>
                 <p className="mt-4 text-lg leading-relaxed">
-                  This approach ensures that our initiatives are not only responsive to community needs but also designed for long-term sustainability and impact. We work closely with local stakeholders, including youth leaders, community elders, government officials, and other development partners, to create and implement programs that address the unique challenges faced by African communities.
-                </p>
+                This holistic approach addresses the complex challenges facing African communities.                 </p>
                 <p className="mt-4 text-lg leading-relaxed">
-                  Our work spans multiple sectors, including education, health, economic empowerment, environmental sustainability, and governance, with a cross-cutting focus on youth leadership and gender equality.
-                </p>
+                We implement a holistic approach to social development through our CARE-SD methodology, which stands for Community Engagement, Advocacy, Research, Empowerment, Strategic Partnerships and Digital Campaigns.                </p>
               </div>
             </motion.div>
             <motion.div
@@ -78,7 +75,7 @@ const WhatWeDo = () => {
               className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl"
             >
               <img
-                src="/lovable-uploads/What We Do /CAL.jpeg"
+                src="/lovable-uploads/What We Do /imagefondecran.jpg"
                 alt="Our Approach"
                 className="w-full h-full object-cover"
               />
@@ -101,23 +98,23 @@ const WhatWeDo = () => {
               {
                 number: "01",
                 title: "Community Action-Led Initiative (CAL)",
-                description: "A comprehensive civic education program aimed at empowering and educating underserved marginalized communities to understand their rights, responsibilities and duties as citizens. Currently operating in Nigeria and Cameroon.",
+                description: "It is a comprehensive civic education initiative aimed at catalyzing active citizenship in underserved grassroots African communities. The primary objective of the project is to educate communities to understand their rights, responsibilities, and duties as citizens. Currently operating in Nigeria and Cameroon.",
                 impact: "Addressing the lack of knowledge regarding civic participatory mechanisms in Sub-Saharan Africa.",
-                image: "/lovable-uploads/What We Do /exemple.png"
+                image: "/lovable-uploads/WhatWeDo /CAL.jpeg"
               },
               {
                 number: "02",
                 title: "Murya",
                 description: "An innovative civic tech initiative designed to bridge the gaps between citizens' needs and government projects. Provides a platform for citizens to voice their concerns about service delivery and empowers the government with data-driven evidence reports.",
                 impact: "Enabling better alignment of government projects with essential citizen needs.",
-                image: "/lovable-uploads/What We Do /Rescue Mission Against Covid.jpg"
+                image: "/lovable-uploads/WhatWeDo /mirya.png"
               },
               {
                 number: "03",
                 title: "Kuri'a",
                 description: "A citizen-led initiative that combines digital and physical engagement to promote electoral accountability, transparency and inclusiveness in Nigeria. Through mobile and web platforms, community outreach and physical events.",
                 impact: "Empowering citizens to participate actively in the electoral process and demand good governance.",
-                image: "/lovable-uploads/What We Do /We Need Peace.JPG"
+                image: "/lovable-uploads/WhatWeDo /Kuria.png"
               },
               {
                 number: "04",
@@ -132,17 +129,17 @@ const WhatWeDo = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-emerald-100 transition-all duration-300 overflow-hidden"
+                className="group relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-emerald-100 transition-all duration-300 overflow-hidden flex flex-col"
               >
-                <div className="relative h-48 w-full">
+                <div className="relative h-80 w-full">
                   <img
                     src={initiative.image}
                     alt={initiative.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
                 </div>
-                <div className="p-8">
+                <div className="p-8 flex-grow">
                   <div className="relative z-10">
                     <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
                       <span className="text-lg font-bold text-emerald-600">{initiative.number}</span>
@@ -180,21 +177,21 @@ const WhatWeDo = () => {
                 description: "It was among the active projects in the northern Nigeria region that advocated for the rights of street children in the past 5 years. The project has a policy recommendation on how to reduce the high rate of dropout school children through a sustainable reformation for both Almajiri and other street children.",
                 impact: "After all the advocacies at the national level, the bill to establish a national commission for Almajiris and many out of school children was signed by the former President of Nigeria, his Excellency Mohammad Buhari in 2023.",
                 tags: ["projects", "Nigeria region that advocated ", "Almajiris"],
-                image: "/lovable-uploads/What We Do /yapd4africa1.png"
+                image: "/lovable-uploads/WhatWeDo /Who Is Almajiri .JPG"
               },
               {
                 title: "Rescue Mission against COVID-19 Project",
                 description: "This project was a short-term activity within 2 months from March to May 2020. Through the project, YAPD4Africa directly impacted 500 beneficiaries while we used our social media as a digital tool to mobilize over 1000 young people to create awareness on the prevention of the COVID-19 disease and help raise resources for the project execution.",
                 impact: "This project also helps to distribute relief materials to the most vulnerable groups of people especially orphanage homes, providing homemade face masks and sanitizers to supplement the low and overpriced supply.",
                 tags: ["Health", "Emergency Response", "Community Support", "COVID-19 Relief"],
-                image: "/lovable-uploads/What We Do /yapd4africa2.png"
+                image: "/lovable-uploads/WhatWeDo /Rescue Mission Against Covid.jpg"
               },
               {
                 title: "We Need Peace Project",
                 description: "We have successfully implemented our 'We Need Peace' project from 8th September, 2018 to 31st March, 2019. This project took us about 7 months to advocate and engage with different community leaders, religion scholars, security agents and political parties on how they can contribute toward promoting peace as a tool for all and at the end of the day, it turned out the elections were conducted peacefully and it was also free and fair.",
                 impact: "This project has contributed to peaceful, free and fair elections through community engagement and advocacy.",
                 tags: ["Peace Building", "Community Engagement", "Advocacy"],
-                image: "/lovable-uploads/What We Do /exemple.png"
+                image: "/lovable-uploads/WhatWeDo /We Need Peace.JPG"
               }
             ].map((project, index) => (
               <motion.div
@@ -202,28 +199,28 @@ const WhatWeDo = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-gray-50/80 backdrop-blur-sm rounded-3xl hover:shadow-lg transition-all duration-300 overflow-hidden"
+                className="group bg-white/80 backdrop-blur-sm rounded-3xl hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div className="relative h-[300px] md:h-full">
+                  <div className="relative h-[400px] md:h-[500px]">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/30 to-transparent"></div>
                   </div>
-                  <div className="p-8">
-                    <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
+                  <div className="p-8 flex flex-col justify-center">
+                    <h3 className="text-2xl font-semibold mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
                       {project.title}
                     </h3>
-                    <p className="text-gray-700 mb-4 leading-relaxed">
+                    <p className="text-gray-700 mb-6 leading-relaxed text-lg">
                       {project.description}
                     </p>
-                    <p className="text-gray-700 mb-4 leading-relaxed">
+                    <p className="text-gray-700 mb-6 leading-relaxed text-lg">
                       <strong className="text-emerald-600">Impact:</strong> {project.impact}
                     </p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mt-auto">
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
