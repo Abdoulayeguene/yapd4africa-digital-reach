@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Twitter, Linkedin, Mail, MapPin, Phone } from "lucide-react";
@@ -7,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#004d00] text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {/* Logo and Tagline */}
           <div className="flex flex-col">
             <div className="mb-4 flex items-center">
@@ -22,6 +21,16 @@ const Footer = () => {
               Advancing social development and empowering African grassroots communities through youth-led empowerment,
               inclusive governance and advocacy.
             </p>
+            <div className="mt-6 flex flex-col items-start">
+              <img
+                src="/lovable-uploads/Donors and Partners/logo-white.svg"
+                alt="Technical Support by AfricTivistes"
+                className="h-25 mb-2" 
+              />
+              <p className="text-sm text-gray-300">
+                This website was designed, developed, and deployed with the technical support of AfricTivistes.
+              </p>
+            </div>
           </div>
 
           {/* Quick Links */}
