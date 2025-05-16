@@ -39,7 +39,7 @@ const Index = () => {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
             >
-              Our <span className="text-green-400">Impact</span>
+              Our <span className="text-green-600">Impact</span>
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -109,10 +109,10 @@ const Index = () => {
                         <impact.icon className="h-7 w-7 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-black mb-2">
+                        <h3 className="text-3xl font-bold text-black mb-2">
                           {impact.value}
                         </h3>
-                        <h4 className="text-lg font-semibold text-green-400 mb-2">
+                        <h4 className="text-lg font-semibold text-green-600 mb-2">
                           {impact.title}
                         </h4>
                         <p className="text-black-300 leading-relaxed">

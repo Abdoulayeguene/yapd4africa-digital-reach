@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "../ui/SectionHeading";
+import { RocketLaunchIcon, LightBulbIcon } from "@heroicons/react/24/outline";
 
 const Mission = () => {
   return (
@@ -19,13 +20,16 @@ const Mission = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-blue-100 hover:shadow-2xl transition-shadow duration-300"
+            className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
           >
             <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-blue-100 rounded-xl">
+                <RocketLaunchIcon className="w-8 h-8 text-blue-600" />
+              </div>
               <h2 className="text-2xl font-bold text-gray-900">Our Mission</h2>
             </div>
-            <p className="text-gray-700 leading-relaxed">
-              Build strong people and sustainable communities in Africa.
+            <p className="text-gray-700 leading-relaxed text-lg">
+              To build strong people and sustainable communities in Africa through innovative solutions and collaborative partnerships.
             </p>
           </motion.div>
 
@@ -33,13 +37,16 @@ const Mission = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-amber-100 hover:shadow-2xl transition-shadow duration-300"
+            className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-amber-100 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
           >
             <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-amber-100 rounded-xl">
+                <LightBulbIcon className="w-8 h-8 text-amber-600" />
+              </div>
               <h2 className="text-2xl font-bold text-gray-900">Our Vision</h2>
             </div>
-            <p className="text-gray-700 leading-relaxed">
-              We envision a world where people are empowered to drive sustainable social development, even in the most remote areas of the globe.
+            <p className="text-gray-700 leading-relaxed text-lg">
+              We envision a world where people are empowered to drive sustainable social development, even in the most remote areas of the globe, creating lasting positive change.
             </p>
           </motion.div>
         </div>

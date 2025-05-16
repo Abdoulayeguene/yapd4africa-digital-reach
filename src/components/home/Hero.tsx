@@ -9,6 +9,79 @@ import { HiMail } from "react-icons/hi";
 const Hero = () => {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[80vh] overflow-hidden">
+      {/* Social Media Links */}
+      <motion.div 
+        className="absolute left-4 md:left-8 top-1/5 transform -translate-y-1/2 z-20 flex flex-col gap-4 md:gap-6 p-4 bg-black/20 rounded-xl"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+      >
+        <a 
+          href="https://linkedin.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group relative bg-white/20 p-3 md:p-4 rounded-full hover:bg-[#0A66C2] text-[#0A66C2] hover:text-white transition-all duration-300"
+        >
+          <FaLinkedinIn className="w-5 h-5 md:w-6 md:h-6" />
+          <span className="absolute left-12 md:left-16 bg-black/80 px-3 md:px-4 py-1 rounded-lg text-base text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            LinkedIn
+          </span>
+        </a>
+        <a 
+          href="https://twitter.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group relative bg-white/20 p-3 md:p-4 rounded-full hover:bg-black text-black hover:text-white transition-all duration-300"
+        >
+          <FaXTwitter className="w-5 h-5 md:w-6 md:h-6" />
+          <span className="absolute left-12 md:left-16 bg-black/80 px-3 md:px-4 py-1 rounded-lg text-base text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            X (Twitter)
+          </span>
+        </a>
+        <a 
+          href="https://instagram.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group relative bg-white/20 p-3 md:p-4 rounded-full hover:bg-gradient-to-br from-[#FF0069] via-[#E4405F] to-[#FE9D41] text-[#E4405F] hover:text-white transition-all duration-300"
+        >
+          <FaInstagram className="w-5 h-5 md:w-6 md:h-6" />
+          <span className="absolute left-12 md:left-16 bg-black/80 px-3 md:px-4 py-1 rounded-lg text-base text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Instagram
+          </span>
+        </a>
+        <a 
+          href="https://facebook.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group relative bg-white/20 p-3 md:p-4 rounded-full hover:bg-[#1877F2] text-[#1877F2] hover:text-white transition-all duration-300"
+        >
+          <FaFacebookF className="w-5 h-5 md:w-6 md:h-6" />
+          <span className="absolute left-12 md:left-16 bg-black/80 px-3 md:px-4 py-1 rounded-lg text-base text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Facebook
+          </span>
+        </a>
+        <a 
+          href="https://youtube.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group relative bg-white/20 p-3 md:p-4 rounded-full hover:bg-[#FF0000] text-[#FF0000] hover:text-white transition-all duration-300"
+        >
+          <FaYoutube className="w-5 h-5 md:w-6 md:h-6" />
+          <span className="absolute left-12 md:left-16 bg-black/80 px-3 md:px-4 py-1 rounded-lg text-base text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            YouTube
+          </span>
+        </a>
+        <div className="w-px h-16 bg-white/40 mx-auto"></div>
+        <button 
+          className="group relative bg-white/20 p-3 md:p-4 rounded-full hover:bg-[#4CAF50] text-[#4CAF50] hover:text-white transition-all duration-300"
+          onClick={() => window.location.href = '#newsletter'}
+        >
+          <HiMail className="w-5 h-5 md:w-6 md:h-6" />
+          <span className="absolute left-12 md:left-16 bg-black/80 px-3 md:px-4 py-1 rounded-lg text-base whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Subscribe to Newsletter
+          </span>
+        </button>
+      </motion.div>
       <div className="absolute inset-0 z-0">
         <img
           src="lovable-uploads/Home/IMG_3127.jpeg"
@@ -18,81 +91,7 @@ const Hero = () => {
         />
       </div>
       
-      {/* Social Media Links */}
-      <motion.div 
-        className="absolute left-8 top-1/3 transform -translate-y-1/2 z-20 flex flex-col gap-6"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-      >
-        <a 
-          href="https://linkedin.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="group relative bg-white/10 p-3 rounded-full hover:bg-[#0A66C2] text-[#0A66C2] hover:text-white transition-all duration-300"
-        >
-          <FaLinkedinIn className="w-5 h-5" />
-          <span className="absolute left-14 bg-black/80 px-3 py-1 rounded-lg text-sm text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            LinkedIn
-          </span>
-        </a>
-        <a 
-          href="https://twitter.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="group relative bg-white/10 p-3 rounded-full hover:bg-black text-black hover:text-white transition-all duration-300"
-        >
-          <FaXTwitter className="w-5 h-5" />
-          <span className="absolute left-14 bg-black/80 px-3 py-1 rounded-lg text-sm text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            X (Twitter)
-          </span>
-        </a>
-        <a 
-          href="https://instagram.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="group relative bg-white/10 p-3 rounded-full hover:bg-gradient-to-br from-[#FF0069] via-[#E4405F] to-[#FE9D41] text-[#E4405F] hover:text-white transition-all duration-300"
-        >
-          <FaInstagram className="w-5 h-5" />
-          <span className="absolute left-14 bg-black/80 px-3 py-1 rounded-lg text-sm text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            Instagram
-          </span>
-        </a>
-        <a 
-          href="https://facebook.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="group relative bg-white/10 p-3 rounded-full hover:bg-[#1877F2] text-[#1877F2] hover:text-white transition-all duration-300"
-        >
-          <FaFacebookF className="w-5 h-5" />
-          <span className="absolute left-14 bg-black/80 px-3 py-1 rounded-lg text-sm text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            Facebook
-          </span>
-        </a>
-        <a 
-          href="https://youtube.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="group relative bg-white/10 p-3 rounded-full hover:bg-[#FF0000] text-[#FF0000] hover:text-white transition-all duration-300"
-        >
-          <FaYoutube className="w-5 h-5" />
-          <span className="absolute left-14 bg-black/80 px-3 py-1 rounded-lg text-sm text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            YouTube
-          </span>
-        </a>
-        <div className="w-px h-12 bg-white/30 mx-auto"></div>
-        <button 
-          className="group relative bg-white/10 p-3 rounded-full hover:bg-[#4CAF50] text-[#4CAF50] hover:text-white transition-all duration-300"
-          onClick={() => window.location.href = '#newsletter'}
-        >
-          <HiMail className="w-5 h-5" />
-          <span className="absolute left-14 bg-black/80 px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            Subscribe to Newsletter
-          </span>
-        </button>
-      </motion.div>
-      
-      <div className="container relative z-10 mx-auto px-4 text-center pt-56">
+      <div className="container relative z-10 mx-auto pr-4 pl-14 md:pl-22 text-center pt-56">
         <motion.div 
           className="mx-auto max-w-4xl"
           initial={{ opacity: 0, y: 20 }}
