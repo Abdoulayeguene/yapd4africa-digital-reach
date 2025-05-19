@@ -14,42 +14,6 @@ const Mission = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Mission & Vision Cards */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-24">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 bg-blue-100 rounded-xl">
-                <RocketLaunchIcon className="w-8 h-8 text-blue-600" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900">Our Mission</h2>
-            </div>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              To build strong people and sustainable communities in Africa through innovative solutions and collaborative partnerships.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-amber-100 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 bg-amber-100 rounded-xl">
-                <LightBulbIcon className="w-8 h-8 text-amber-600" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900">Our Vision</h2>
-            </div>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              We envision a world where people are empowered to drive sustainable social development, even in the most remote areas of the globe, creating lasting positive change.
-            </p>
-          </motion.div>
-        </div>
 
         {/* Core Values Section */}
         <div className="relative">
