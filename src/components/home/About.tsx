@@ -31,8 +31,7 @@ const About = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Founded in 2017, Connected Youth for Accountability, Peace and Development Initiative (YAPD4Africa) is a well-known youth-led nonprofit and civic society organization, whose dedicated mission is to build strong people and sustainable communities in Africa.
-            </motion.p>
+Founded in 2017, Connected Youth for Accountability, Peace and Development Initiative (YAPD4Africa) is a Pan-African youth-led civil society organization, whose dedicated mission is to build strong people and sustainable communities in Africa.             </motion.p>
 
             <motion.p 
               className="text-lg text-gray-700 leading-relaxed"
@@ -40,7 +39,7 @@ const About = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              Our primary focus is to empower people with the right knowledge and skills to advocate for their rights and community development across the continent through our various homegrown initiatives and projects.
+Our primary focus is to empower people with the accurate knowledge and skills to advocate for their rights and community development across the continent through our various homegrown initiatives and social impact projects.
             </motion.p>
           </motion.div>
 
